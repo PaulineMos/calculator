@@ -14,25 +14,39 @@ public class Calculator {
 
         double da = Double.parseDouble(a);
         double db = Double.parseDouble(b);
+
         double result;
-        switch (op){
+
+        switch (op) {
             case "+":
                 result = da + db;
                 break;
             case "-":
                 result = da - db;
                 break;
-            case "*":
-                result = da * db;
-                break;
-            case "/":
-                result = da / db;
-                break;
+            default:
+                return "Error";
+        }
+
+        if (expression.length == 5) {
+            String c = expression[4];
+            String opp = expression[3];
+            double dc = Double.parseDouble(c);
+
+            switch (opp) {
+                case "+":
+                    result = result + dc;
+                    break;
+                case "-":
+                    result = result - dc;
+                    break;
                 default:
                     return "Error";
+            }
         }
+
+
         return String.valueOf(result);
     }
-
 
 }
