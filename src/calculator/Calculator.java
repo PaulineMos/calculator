@@ -54,6 +54,7 @@ public class Calculator {
                     break;
                 default:
                     return "Error";
+
             }
         }
 
