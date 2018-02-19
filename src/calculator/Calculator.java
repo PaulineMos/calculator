@@ -24,6 +24,12 @@ public class Calculator {
             case "-":
                 result = da - db;
                 break;
+            case "*":
+                result = da * db;
+                break;
+            case "/":
+                result = da / db;
+                break;
             default:
                 return "Error";
         }
@@ -39,6 +45,12 @@ public class Calculator {
                     break;
                 case "-":
                     result = result - dc;
+                    break;
+                case "*":
+                    result = result * dc;
+                    break;
+                case "/":
+                    result = result / dc;
                     break;
                 default:
                     return "Error";
